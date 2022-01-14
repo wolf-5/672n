@@ -7,7 +7,7 @@ set LOC=%~dp0
 
 dir /B /S /A:-D >> test0.txt
 
-findstr /v "media .bat .exe .mp4 .git offlinexmb.cache test0.txt" test0.txt > test.txt
+findstr /v "media .bat .exe .mp4 .git .rar Cache.manifest test0.txt" test0.txt > test.txt
 del test0.txt
 
 @echo off
@@ -27,9 +27,9 @@ set "firstLineReady="
 if defined firstLineReady (echo()
 set "firstLineReady=1"
 <nul set /p "=%%a")
-) > offlinexmb.cache
+) > Cache.manifest
 del test.txt
 
-echo offlinexmb.cache created!!
+echo Cache.manifest created!!
 
 sleep 2

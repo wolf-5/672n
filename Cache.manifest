@@ -6,6 +6,7 @@ Beef132.js
 Beef138.js
 binLoader.js
 c-code.js
+cache.html
 dbBackup.js
 dbRestore.js
 disableupdates.js
@@ -44,7 +45,6 @@ red113.js
 red119.js
 red124.js
 rop.js
-Style.css
 syscalls.js
 syscalls2.js
 todex.js
