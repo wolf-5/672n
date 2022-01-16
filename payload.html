@@ -5,10 +5,10 @@ background-color: #24272b;
 }
 </style>
 <body onload="go()">
+</style>
 <script>
-if(document.cookie.indexOf('kex=0') >= 0)
-    document.location.href = 'index.html';
-document.cookie = 'kex=0';
+    if(document.cookie.indexOf('kex=0') >= 0)
+        window.location.href = document.referrer;
 </script>
 <script>
 function print(){}
@@ -53,13 +53,13 @@ function loadScript(path)
 </script>
 <script src="netcat.js"></script>
 <script>
-if(main_ret == 179 /* already hacked */ || main_ret == 0 /* success */)
-{
-    alert("You're all set!");
-    read_ptr_at(0);
-}
-else
-    alert("Jailbreak failed! Reboot your PS4 and try again.");
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("Jailbreak Success !\n PRESS OK AND WAIT FOR THE MEMORY ERROR !!!!!");
+        window.location = 'index.html';
+    }
+    else
+        alert("Jailbreak failed! Reboot your PS4 and try again.");
 </script>
 </body>
 </html>
