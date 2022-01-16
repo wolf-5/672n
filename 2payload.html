@@ -7,6 +7,10 @@ background-color: #24272b;
 <body onload="go()">
 </style>
 <script>
+    if(document.cookie.indexOf('kex=0') >= 0)
+        window.location.href = document.referrer;
+</script>
+<script>
 function print(){}
 </script>
 <script src="exploit.js"></script>
@@ -51,6 +55,7 @@ function loadScript(path)
 <script>
     if(main_ret == 0 || main_ret == 179)
     {
+        alert("Jailbreak Success !\n PRESS OK AND WAIT FOR THE MEMORY ERROR !!!!!");
         window.location = 'index.html';
     }
     else
